@@ -1,0 +1,16 @@
+.detail-page {
+  box-shadow: 0 0 10px rgb(202 202 202 / 50%);
+  display: flex;
+  border-radius: 8px;
+  background: white;
+}
+
+.detail-left {
+  width: 30%;
+  margin-right: 20px;
+  position: relative;
+}
+
+.detail-right {
+  width: 70%;
+}

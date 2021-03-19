@@ -1,0 +1,16 @@
+<h2>Детали товара</h2>
+<div class="container">
+  <div *ngIf="product">
+    <div class="detail-page">
+      <div class="detail-left">
+        <img src="{{ product.image }}" style="width: 100%">
+      </div>
+      <div class="detail-right">
+        <h3>{{ product.name }}</h3>
+        <h4>{{ product.price}} Руб</h4>
+        <p>{{ product.description }}</p>
+        <button (click)="addToCart(product)">Купить</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <h2><b>Все товары</b></h2>
+  <div class="product-list-container">
+    <div *ngFor="let product of products; index as productId" class="product-item">
+      <img src="{{ product.image }}" class="product-image">
+      <h3>
+        <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+          {{ product.name }}
+        </a>
+      </h3>
+      <p *ngIf="product.description">
+        {{ product.description }}
+      </p>
+
+      <button (click)="share()">
+  Share
+</button>
+
+      <app-product-alerts [product]="product" (notify)="onNotify()">
+      </app-product-alerts>
+
+
+    </div>
+  </div>
+</div>
